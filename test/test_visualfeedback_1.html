@@ -39,7 +39,7 @@
 			var init = function()
 			{
 				var box = wink.byId('finger_box');
-				wink.ux.touch.addListener(box, "start", { context: handler, method: "onstart" }, { tracking: false, preventDefault: true });
+				wink.ux.touch.addListener(box, "start", { context: handler, method: "onstart" }, { tracking: false, preventDefault: true, touchAction: "none" });
 				wink.ux.touch.addListener(document.body, "move", { context: handler, method: "onmove" }, { preventDefault: true });
 				wink.ux.touch.addListener(document.body, "end", { context: handler, method: "onend" });
 			};
