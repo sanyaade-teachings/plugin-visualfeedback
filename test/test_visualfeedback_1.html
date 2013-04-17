@@ -16,7 +16,6 @@
 		<!-- Can be replaced by wink.min.js -->
 		<script type="text/javascript" src="../../../_amd/js/amd.js"></script>
 		<script type="text/javascript" src="../../../_base/_base/js/base.js"></script>
-		<script type="text/javascript" src="../../../_base/_dom/js/dom.js"></script>
 		<script type="text/javascript" src="../../../_base/error/js/error.js"></script>
 		<script type="text/javascript" src="../../../_base/json/js/json.js"></script>
 		<script type="text/javascript" src="../../../_base/ua/js/ua.js"></script>
@@ -40,7 +39,7 @@
 			var init = function()
 			{
 				var box = wink.byId('finger_box');
-				wink.ux.touch.addListener(box, "start", { context: handler, method: "onstart" }, { tracking: false, preventDefault: true });
+				wink.ux.touch.addListener(box, "start", { context: handler, method: "onstart" }, { tracking: false, preventDefault: true, touchAction: "none" });
 				wink.ux.touch.addListener(document.body, "move", { context: handler, method: "onmove" }, { preventDefault: true });
 				wink.ux.touch.addListener(document.body, "end", { context: handler, method: "onend" });
 			};
